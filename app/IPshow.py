@@ -11,7 +11,7 @@ IPAddr=socket.gethostbyname(hostname)
 @app.route('/')
 def ip():
     ip= IPAddr
-    return 'My Local IP Address {}' .format(ip)
+    return f'<H1>Hostname:{hostname} IP Address {ip}</H1>' #.format(ip)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0",port=5000,debug=True,threaded=True)

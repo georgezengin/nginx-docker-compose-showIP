@@ -2,7 +2,8 @@
 FROM python:3.10-alpine
 
 WORKDIR /app
-COPY . .
+COPY IPshow.py .
+COPY requirements.txt .
 
 # Install Python libraries
 RUN pip install --no-cache-dir -r requirements.txt
@@ -11,5 +12,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 ENV FLASK_APP="IPshow.py"
 EXPOSE 5000
 #CMD ["python", "IPshow.py"]
-#CMD flask run --port=5000 --host=0.0.0.0
-CMD flask run --port=5000
+CMD flask run --port=5000 --host=0.0.0.0
