@@ -8,4 +8,7 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Run the Python script
-CMD ["python", "IPshow.py"]
+ENV FLASK_APP=IPshow.py
+EXPOSE 5000
+#CMD ["python", "IPshow.py"]
+CMD flask run --port=5000 --host=0.0.0.0

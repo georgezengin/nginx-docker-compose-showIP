@@ -3,7 +3,7 @@ from flask import Flask
 import socket
 
 app = Flask(__name__)
-cache = redis.Redis(host='redis', port=6379)
+cache = redis.Redis(host='redis', port=8080) #6379)
 
 hostname=socket.gethostname()   
 IPAddr=socket.gethostbyname(hostname) 
