@@ -1,0 +1,19 @@
+services:
+  redis:
+    image: redislabs/redismod
+    container_name: redis
+    ports:
+      - 6379:6379
+
+  flask:
+    build: ./app
+    container_name: flask
+    ports:
+      - 5000:5000
+    volumes:
+      - vol_ex2:/app
+    depends_on:
+      - redis
+
+volumes:
+  vol_ex2:
