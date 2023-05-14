@@ -19,8 +19,8 @@ services:
   app1:
     build: ./app
     container_name: showIPHostapp1
-    ports:
-      - 80:80
+    #ports:
+    #  - 80:80
     networks:
       - showIPnetwork
     volumes:
@@ -29,8 +29,8 @@ services:
   app2:
     build: ./app
     container_name: showIPHostapp2
-    ports:
-      - 81:80
+    #ports:
+    #  - 81:80
     networks:
       - showIPnetwork
     volumes:
@@ -39,8 +39,8 @@ services:
   app3:
     build: ./app
     container_name: showIPHostapp3
-    ports:
-      - 82:80
+    #ports:
+    #  - 82:80
     networks:
       - showIPnetwork
     volumes:
